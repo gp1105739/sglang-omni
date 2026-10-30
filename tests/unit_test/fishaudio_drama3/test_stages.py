@@ -159,8 +159,8 @@ def test_preprocessing_reads_the_checkpoint_and_loads_the_codec_on_cpu(
         codec_path=str(tmp_path / "codec.pth"),
         reference_encode_dtype="float32",
         max_reference_audio_seconds=30.0,
-        reference_encode_max_batch_size: 8,
-        reference_encode_max_batch_wait_ms: 2,
+        reference_encode_max_batch_size=8,
+        reference_encode_max_batch_wait_ms=2,
     )
 
     preprocessor = scheduler.fn

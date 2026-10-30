@@ -135,10 +135,10 @@ def create_preprocessing_executor(
         config=FishOmniConfig.from_pretrained(checkpoint_dir),
         max_prompt_rows=max_prompt_rows,
         reference_encoder=ReferenceEncodeService(
-            reference_encode_hook, 
+            reference_encode_hook,
             log_prefix="Fish Audio Drama 3",
             max_batch_size=reference_encode_max_batch_size,
-            max_batch_wait_ms=reference_encode_max_batch_wait_ms
+            max_batch_wait_ms=reference_encode_max_batch_wait_ms,
         ),
     )
     return ThreadedSimpleScheduler(preprocessor, max_concurrency=max_concurrency)

@@ -113,10 +113,6 @@ def test_preprocessing_follows_the_engine_cap_and_the_vocoder_codec() -> None:
         "max_prompt_rows": 4096,
         "codec_path": "local/codec.pth",
     }
-
-
-
-    
     assert launch_kwargs(config, "tts_engine")["max_prompt_rows"] == 4096
     assert launch_kwargs(config, "vocoder")["codec_path"] == "local/codec.pth"
 
